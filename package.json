@@ -8,7 +8,7 @@
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "prod": "npm run build && node dist/server.js",
     "dev": "nodemon server.js --exec babel-node --presets es2015,stage-2 --env local",
-    "start": "babel-node server.js --presets es2015,stage-2"
+    "start": "npm run build && node dist/server.js"
   },
   "author": "Hanif Hayihama",
   "license": "ISC",

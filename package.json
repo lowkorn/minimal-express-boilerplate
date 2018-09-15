@@ -1,0 +1,34 @@
+{
+  "name": "express-babel-hot-reload",
+  "version": "1.0.0",
+  "description": "boilerplate for an express mongoose and babel setup",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "prod": "npm run build && node dist/server.js",
+    "dev": "nodemon server.js --exec babel-node --presets es2015,stage-2 --env local",
+    "start": "babel-node server.js --presets es2015,stage-2"
+  },
+  "author": "Hanif Hayihama",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "js-yaml": "^3.12.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.14",
+    "yargs": "^12.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^9.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.4",
+    "rimraf": "^2.6.2"
+  }
+}

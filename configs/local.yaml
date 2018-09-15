@@ -1,0 +1,3 @@
+test:
+  name: helloworld
+  env: local
